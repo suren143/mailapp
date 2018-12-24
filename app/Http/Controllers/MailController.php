@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\MailFormValidationRequest;
 
 class MailController extends Controller
 {
@@ -80,6 +81,10 @@ class MailController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function sendmail(MailFormValidationRequest $request){
+
     }
 
 

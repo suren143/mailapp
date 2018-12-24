@@ -27,5 +27,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
 
     </script>
+   <link rel="stylesheet" href="{{asset('ckeditor/ckeditor.js')}}">
+   <script>
+       // Replace the <textarea id="editor1"> with a CKEditor
+       // instance, using default configuration.
+       CKEDITOR.replace( 'editor1' );
+   </script>
   </body>
 </html>

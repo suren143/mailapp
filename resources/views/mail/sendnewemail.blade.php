@@ -7,7 +7,7 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-          <form class="form-horizontal" action="{{route('sendmail.store')}}" method="post" role="form">
+          <form class="form-horizontal" action="{{route('sendmail.mail')}}" method="post" role="form">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div class="form-group">
                 <legend style="color:white;">Send Email To EveryOne</legend>
@@ -25,7 +25,7 @@
 
             <div class="form-group">
               <label for="email">Message</label>
-              <textarea name="message" rows="8" cols="80" class="form-control" id="message"></textarea>
+              <textarea name="message" rows="8" cols="80" class="form-control ckeditor" id="editor1"></textarea>
             </div>
 
             <div class="form-group">
@@ -34,6 +34,24 @@
               </div>
             </div>
           </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        @if(Session::has('errors'))
+          @foreach($errors->all() as $error)
+
+          <div class="alert alert-danger">
+             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+             <strong>{{$error}}</strong>
+        </div>
+          @endforeach
+
+        @endif
       </div>
     </div>
   </div>

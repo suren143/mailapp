@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::resource('/sendmail', 'MailController');
+Route::post('/mail/sendmail', 'MailController@sendmail')->name('sendmail.mail');
+Route::resource('/mail', 'MailController');
