@@ -1,6 +1,20 @@
 @extends('welcome')
 
 @section('content')
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" style="margin-top: 200px;">
+        @if(Session::has('flashmessage'))
+            <div class="alert alert-danger">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong>{{ Session::get('flashmessage')}}</strong>
+            </div>
+        @endif
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="row">
         <h1 class="text-center">Mail App Laravel</h1>
